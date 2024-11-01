@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "AGIO",
+			"path": "."
+		},
+		{
+			"name": "AGI",
+			"path": "../AGI"
+		}
+	],
+	"settings": {}
+}

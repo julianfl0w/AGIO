@@ -1,0 +1,1 @@
+sudo http-server -c-1 -a 0.0.0.0 -p 443 --ssl --cert ./keys/server.cert --key ./keys/server.key

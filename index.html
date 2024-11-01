@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebXR Llama Encounter</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="/js/interface.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div id="debugInfo">Debug info will appear here</div>
+    
+    <a-scene id="scene" embedded renderer="antialias: true">
+        <a-assets>
+            <a-asset-item id="fieldModel" src="./assets/mountain_skybox/scene.gltf"></a-asset-item>
+            <a-asset-item id="freudCow" src="./assets/euroman.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity gltf-model="#fieldModel" position="0 80 0" scale="100 100 100"></a-entity>
+        
+        <a-entity id="freudCowEntity"
+                  class="raycaster-target"
+                  gltf-model="#freudCow" 
+                  data-raycastable
+                  position="-10 -10 -25" 
+                  scale="10 10 10" 
+                  rotation="0 20 0">
+        </a-entity>
+
+        <a-camera id="camera" 
+                  position="0 0 0" 
+                  look-controls="enabled: true"
+                  wasd-controls="enabled: true"
+                  raycaster="objects: .raycaster-target; far: 100; interval: 100; lineColor: red; lineOpacity: 0.5"
+                  improved-raycaster-handler>
+            <a-cursor color="red" fuse="true" fuseTimeout="1000"></a-cursor>
+        </a-camera>
+
+        <a-light type="ambient" color="#ccc"></a-light>
+        <a-light type="point" position="0 10 0" color="#fff" intensity="0.5"></a-light>
+        <a-sky color="#3333FF"></a-sky>
+    </a-scene>
+
+    <div id="speechInputContainer">
+        <input id="speechInput" type="text" placeholder="Speak to the Llama...">
+        <button onclick="speakToLlama()">Send</button>
+        <div id="llamaResponse"></div>
+    </div>
+</body>
+</html>

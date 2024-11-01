@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mountain Skybox
+* source:	https://sketchfab.com/3d-models/mountain-skybox-f17f0206deb545f79f690bd06dd3b7ad
+* author:	Isaac Ryan (https://sketchfab.com/djisaacryan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mountain Skybox" (https://sketchfab.com/3d-models/mountain-skybox-f17f0206deb545f79f690bd06dd3b7ad) by Isaac Ryan (https://sketchfab.com/djisaacryan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
