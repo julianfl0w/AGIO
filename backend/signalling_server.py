@@ -12,7 +12,6 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 connections = {}
 
 import multiprocessing as mp
-import brain
 
 
 @socketio.on('connect', namespace='/connect')
