@@ -1678,7 +1678,7 @@ var Janus = (function (factory) {
 				return;
 			}
 			let onDataChannelMessage = function(event) {
-				//Janus.log('Received message on data channel:', event);
+				Janus.log('Received message on data channel:', event);
 				let label = event.target.label;
 				pluginHandle.ondata(event.data, label);
 			};
@@ -1756,7 +1756,7 @@ var Janus = (function (factory) {
 				callbacks.success();
 				return;
 			}
-			//Janus.log("Sending data on data channel <" + label + ">");
+			Janus.log("Sending data on data channel <" + label + ">");
 			Janus.debug(data);
 			config.dataChannel[label].send(data);
 			callbacks.success();
