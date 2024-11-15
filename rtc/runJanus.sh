@@ -1,0 +1,1 @@
+<installdir>/etc/janus/janus.jcfg
