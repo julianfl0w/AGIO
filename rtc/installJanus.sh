@@ -3,7 +3,7 @@ sudo apt update
 sudo apt install -y libmicrohttpd-dev libjansson-dev \
 	libssl-dev libsofia-sip-ua-dev libglib2.0-dev \
 	libopus-dev libogg-dev libcurl4-openssl-dev liblua5.3-dev \
-	libconfig-dev pkg-config libtool automake aptitude \ 
+	libconfig-dev pkg-config libtool automake aptitude \
     python3-pip python3-setuptools python3-wheel ninja-build
 
 pip3 install --user meson
