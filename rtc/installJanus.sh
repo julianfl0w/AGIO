@@ -1,7 +1,12 @@
-apt install libmicrohttpd-dev libjansson-dev \
+sudo apt update
+
+sudo apt install -y libmicrohttpd-dev libjansson-dev \
 	libssl-dev libsofia-sip-ua-dev libglib2.0-dev \
 	libopus-dev libogg-dev libcurl4-openssl-dev liblua5.3-dev \
-	libconfig-dev pkg-config libtool automake aptitude
+	libconfig-dev pkg-config libtool automake aptitude \ 
+    python3-pip python3-setuptools python3-wheel ninja-build
+
+pip3 install --user meson
 
 git clone https://gitlab.freedesktop.org/libnice/libnice
 cd libnice
@@ -15,7 +20,7 @@ cd usrsctp
 make && sudo make install
 cd .. 
 
-aptitude install doxygen graphviz
+sudo aptitude install doxygen graphviz
 
 git clone https://github.com/meetecho/janus-gateway.git
 cd janus-gateway
@@ -24,7 +29,7 @@ sh autogen.sh
 
 ./configure --prefix=/opt/janus
 make
-make install
+sudo make install
 
 make configs
 # ./configure --disable-websockets --disable-data-channels --disable-rabbitmq --disable-mqtt
