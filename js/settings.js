@@ -53,15 +53,13 @@
 //
 var server = null;
 var serverUrl = window.location.hostname;
-httpServerUrl = "janus.juliancoy.us";
-wsServerUrl = "janusws.juliancoy.us";
+//httpServerUrl = "janus.juliancoy.us";
+var httpServerUrl = "janus.baltagi.us:8089";
 
 if(window.location.protocol === 'https:')
 	server = "https://" + httpServerUrl + "/janus";
 else if(window.location.protocol === 'http:')
 	server = "http://" + httpServerUrl + "/janus";
-else
-	server = "https://" + wsServerUrl + "/janus";
 
 // When creating a Janus object, we can also specify which STUN/TURN
 // servers we'd like to use to gather additional candidates. This is
